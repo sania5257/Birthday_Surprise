@@ -94,3 +94,55 @@ footer{font-size:13px;margin-top:35px;color:#d8f3ff}
   font-size: 55px;
   margin-top: 12px;
 }
+
+/* 3D Doraemon Images */
+.dora-image {
+  object-fit: contain;
+  filter: drop-shadow(0 8px 12px rgba(0, 90, 180, 0.2));
+  animation: doraFloat 3s ease-in-out infinite;
+}
+
+.dora-hero {
+  width: 150px;
+  height: 150px;
+}
+
+.dora-small {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.pocket-character {
+  width: 110px;
+  height: 110px;
+  display: block;
+  margin: 12px auto 0;
+}
+
+@keyframes doraFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 600px) {
+  .dora-hero {
+    width: 125px;
+    height: 125px;
+  }
+
+  .dora-small {
+    width: 85px;
+    height: 85px;
+  }
+
+  .pocket-character {
+    width: 95px;
+    height: 95px;
+  }
+}
