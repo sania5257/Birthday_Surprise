@@ -73,23 +73,29 @@ const birthdayAudio = document.getElementById("birthdayAudio");
 if (birthdayAudio) {
   birthdayAudio.volume = 0.65;
 
-  // Try automatic playback when the page loads
+  const startMusic = () => {
+    if (!birthdayAudio.paused) return;
+
+    birthdayAudio.play()
+      .then(() => {
+        document.removeEventListener("click", startMusic);
+        document.removeEventListener("touchend", startMusic);
+        document.removeEventListener("pointerdown", startMusic);
+      })
+      .catch((error) => {
+        console.log("Music playback waiting for another interaction:", error);
+      });
+  };
+
   window.addEventListener("load", () => {
     birthdayAudio.play().catch(() => {
-      console.log("Waiting for user interaction to play music.");
+      console.log("Autoplay blocked. Waiting for user interaction.");
     });
   });
 
-  // Start music after the first click or tap if autoplay is blocked
-  const startMusic = () => {
-    birthdayAudio.play().catch(() => {});
-
-    document.removeEventListener("click", startMusic);
-    document.removeEventListener("touchstart", startMusic);
-  };
-
   document.addEventListener("click", startMusic);
-  document.addEventListener("touchstart", startMusic);
+  document.addEventListener("touchend", startMusic);
+  document.addEventListener("pointerdown", startMusic);
 }
 
 // Falling animation
