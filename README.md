@@ -1,4 +1,4 @@
-# Doraemon Birthday Surprise 💙🎂
+# Birthday Surprise 💙🎂
 
 A cute, responsive birthday surprise website with a Doraemon-inspired blue theme, birthday message, photo memories, cake wish interaction, and optional music.
 
