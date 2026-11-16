@@ -31,6 +31,27 @@ function confettiHearts(){
     document.body.appendChild(item);
     setTimeout(()=>item.remove(),6500);
   }
+  const birthdayAudio = document.getElementById("birthdayAudio");
+
+if (birthdayAudio) {
+  birthdayAudio.volume = 0.65;
+
+  window.addEventListener("load", () => {
+    birthdayAudio.play().catch(() => {
+      console.log("Waiting for user interaction to play music.");
+    });
+  });
+
+  const startMusic = () => {
+    birthdayAudio.play().catch(() => {});
+
+    document.removeEventListener("click", startMusic);
+    document.removeEventListener("touchstart", startMusic);
+  };
+
+  document.addEventListener("click", startMusic);
+  document.addEventListener("touchstart", startMusic);
+}
 }
 const style=document.createElement("style");
 style.textContent="@keyframes fall{to{transform:translateY(110vh) rotate(400deg);opacity:0}}";
