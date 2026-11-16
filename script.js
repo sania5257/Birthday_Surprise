@@ -105,3 +105,16 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
+// Doraemon's Magic Pocket
+
+const pocketButtons = document.querySelectorAll(".pocket-choice");
+const pocketResult = document.getElementById("pocketResult");
+
+pocketButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    pocketResult.textContent = button.dataset.message;
+    pocketResult.classList.remove("hidden");
+    confettiHearts();
+  });
+});
