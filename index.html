@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doraemon Birthday Surprise 💙</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky-decor" aria-hidden="true">
+    <span class="star s1">✦</span><span class="star s2">✧</span><span class="star s3">✦</span>
+    <span class="heart h1">💗</span><span class="heart h2">💕</span>
+  </div>
+
+  <main class="site">
+    <section class="hero panel" id="home">
+      <div class="dora dora-hero" aria-hidden="true">🤖</div>
+      <span class="eyebrow">A tiny pocket of happiness</span>
+      <h1>Happy Birthday<span class="blue-dot">!</span></h1>
+      <p class="lead">A special surprise from the 22nd-century cat robot… just for you 💙</p>
+      <button class="primary" id="openSurprise">Click to Open ✨</button>
+      <div class="hint">Psst… there's more below ↓</div>
+    </section>
+
+    <section class="panel gift-panel hidden" id="giftReveal">
+      <div class="gift" aria-hidden="true">🎁</div>
+      <h2>Surprise! 💖</h2>
+      <p>Someone has a very special birthday today!</p>
+      <button class="secondary" id="continueBtn">Continue the magic ↓</button>
+    </section>
+
+    <section class="panel message-panel" id="message">
+      <div class="dora-small" aria-hidden="true">🐱‍👓</div>
+      <span class="eyebrow">A birthday message</span>
+      <h2>Dear <span id="personName">Birthday Star</span> 💌</h2>
+      <p class="message">May your life be filled with joy, your dreams come true, and every day bring you happiness.</p>
+      <p>You deserve all the love, laughter, and wonderful surprises in the world!</p>
+      <div class="ribbon">Stay happy always! 💗</div>
+    </section>
+
+    <section class="panel memories-panel" id="memories">
+      <span class="eyebrow">Little moments, big memories</span>
+      <h2>Our Memories 📸</h2>
+      <p class="section-intro">Add your favorite pictures here to make this page truly yours.</p>
+      <div class="gallery">
+        <figure><img src="images/photo1.jpg" alt="Memory photo 1"><figcaption>Memory #1</figcaption></figure>
+        <figure><img src="images/photo2.jpg" alt="Memory photo 2"><figcaption>Memory #2</figcaption></figure>
+        <figure><img src="images/photo3.jpg" alt="Memory photo 3"><figcaption>Memory #3</figcaption></figure>
+      </div>
+      <p class="small-note">Replace photo1.jpg, photo2.jpg and photo3.jpg in the images folder.</p>
+    </section>
+
+    <section class="panel cake-panel" id="cake">
+      <span class="eyebrow">Make a wish!</span>
+      <h2>Birthday Cake 🎂</h2>
+      <div class="cake" aria-label="Birthday cake with candles">
+        <div class="candles"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="cake-top">🍓 🍰 🍓</div>
+        <div class="cake-base"></div>
+      </div>
+      <p>Close your eyes, make a wish, and tap the button!</p>
+      <button class="primary" id="wishBtn">Make a Wish ♡</button>
+      <p class="wish-result hidden" id="wishResult">✨ May your sweetest wish come true! ✨</p>
+    </section>
+
+    <section class="panel reminder-panel">
+      <span class="eyebrow">A little reminder</span>
+      <h2>Never forget… 💕</h2>
+      <div class="sticky-note">You are kind.<br>You are amazing.<br>You are enough. ♡</div>
+      <p>Keep being your lovely, wonderful self.</p>
+    </section>
+
+    <section class="panel music-panel">
+      <span class="eyebrow">A song for your day</span>
+      <h2>Birthday soundtrack 🎵</h2>
+      <p>Put your favorite song in the <code>audio</code> folder and name it <code>birthday.mp3</code>.</p>
+      <audio controls loop>
+        <source src="audio/birthday.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+      </audio>
+      <p class="small-note">Music starts only when you press play.</p>
+    </section>
+
+    <section class="final panel">
+      <div class="moon">🌙</div>
+      <h2>Thank you for being part of my special day!</h2>
+      <p>May you always find happiness, keep dreaming, and never run out of reasons to smile.</p>
+      <button class="primary" id="backTop">Stay Happy Always ♡</button>
+      <footer>Made with 💙 and a little Doraemon magic</footer>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
